@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คลือหนังสัง</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">คลือหนังสัง</div>
+        <nav class="side-nav">
+            <h3>หมวดหมู่</h3>
+            <ul>
+                <li><a href="#home">หน้าแรก</a></li>
+                <li><a href="#textbooks">หนังสือเรียน</a></li>
+                <li><a href="#comics">การ์ตูน</a></li>
+                <li><a href="#novels">นิยาย</a></li>
+                <li><a href="#educational">หนังสือให้ความรู้</a></li>
+            </ul>
+        </nav>
+        <div class="cart-button">
+            <a href="#cart" onclick="toggleCart()">
+                ตะกร้าสินค้า
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+        
+        <div id="cart-sidebar" class="cart-sidebar">
+            <h3>ตะกร้าสินค้า</h3>
+            <div id="cart-items"></div>
+            <div class="cart-summary">
+                <p>ราคารวม: <span id="cart-total">0</span> บาท</p>
+                <button onclick="checkout()">สั่งซื้อ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+    <header class="main-header">
+        <div class="header-top">
+            <div class="search-bar">
+                <input type="text" placeholder="ค้นหาหนังสือ...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-controls">
+                <a href="#login">เข้าสู่ระบบ / สมัครสมาชิก</a>
+                <a href="#cart" class="cart-icon">ตะกร้า</a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home" class="active">หน้าแรก</a></li>
+                <li><a href="#promotion">โปรโมชั่น</a></li>
+                <li><a href="#free">ฟรีกระจาย</a></li>
+                <li><a href="#recommend">แนะนำ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="textbooks">
+            <h2>หนังสือเรียน</h2>
+            <div class="book-grid">
+                <div class="book-card sold-out">
+                    <div class="status-badge">สินค้าหมด</div>
+                    <img src="https://www.ssobooks.com/wp-content/uploads/2022/03/20901-1002.jpg" alt="การเขียนโปรแกรมคอมพิวเตอร์เบื้องต้น">
+                    <h3>การเขียนโปรแกรมคอมพิวเตอร์เบื้องต้น</h3>
+                    <p>148 บาท</p>
+                    <button>เพิ่มลงตะกร้า</button>
+                </div>
+                <div class="book-card sold-out">
+                    <div class="status-badge">สินค้าหมด</div>
+                    <img src="https://online.pubhtml5.com/zdig/rhww/files/large/1.jpg" alt="คณิตศาสตร์ ม.1">
+                    <h3>คณิตศาสตร์ ม.1</h3>
+                    <p>250 บาท</p>
+                    <button>เพิ่มลงตะกร้า</button>
+                </div>
+                <div class="book-card sold-out">
+                    <div class="status-badge">สินค้าหมด</div>
+                    <img src="https://www.nanmeebooks.com/cover/9786160913367.jpg" alt="วิทยาศาสตร์ ม.1">
+                    <h3>วิทยาศาสตร์ ม.1</h3>
+                    <p>280 บาท</p>
+                    <button>เพิ่มลงตะกร้า</button>
+                </div>
+                <div class="book-card sold-out">
+                    <div class="status-badge">สินค้าหมด</div>
+                    <img src="https://static.trueplookpanya.com/trueplookpanya/media/hash_knowledge/201806211517421383_17.jpg" alt="ภาษาไทย ม.1">
+                    <h3>ภาษาไทย ม.1</h3>
+                    <p>220 บาท</p>
+                    <button>เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="comics">
+            <h2>การ์ตูน</h2>
+            <div class="book-grid">
+                <div class="book-card sold-out">
+                    <div class="status-badge">สินค้าหมด</div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSOIis2iaqDnbPIi2USITsCF3tg0XWFbg3-g&s" alt="นารุโตะ เล่ม 1">
+                    <h3>นารุโตะ เล่ม 1</h3>
+                    <p>60 บาท</p>
+                    <button>เพิ่มลงตะกร้า</button>
+                </div>
+                <div class="book-card sold-out">
+                    <div class="status-badge">สินค้าหมด</div>
+                    <img src="https://du.lnwfile.com/typm6v.png" alt="วันพีช เล่ม 1">
+                    <h3>วันพีช เล่ม 1</h3>
+                    <p>65 บาท</p>
+                    <button>เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="novels">
+            <h2>นิยาย</h2>
+            <div class="book-grid">
+                <div class="book-card sold-out">
+                    <div class="status-badge">สินค้าหมด</div>
+                    <img src="https://image.makewebcdn.com/makeweb/m_1920x0/7GFEYsdVK/DefaultData/COVER_Harry_Potter_and_Philosopher_s_Stone_25th_Jacket_02.jpg" alt="แฮร์รี่ พอตเตอร์">
+                    <h3>แฮร์รี่ พอตเตอร์ ภาค 1</h3>
+                    <p>299 บาท</p>
+                    <button>เพิ่มลงตะกร้า</button>
+                </div>
+                <div class="book-card sold-out">
+                    <div class="status-badge">สินค้าหมด</div>
+                    <img src="https://winyuchon.com/wp-content/uploads/2021/12/000-9.jpg" alt="เจ้าชายน้อย">
+                    <h3>เจ้าชายน้อย</h3>
+                    <p>159 บาท</p>
+                    <button>เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="educational">
+            <h2>หนังสือให้ความรู้</h2>
+            <div class="book-grid">
+                <div class="book-card sold-out">
+                    <div class="status-badge">สินค้าหมด</div>
+                    <img src="https://cdn-local.mebmarket.com/meb/server1/117444/Thumbnail/book_detail_large.gif?2" alt="คณิตศาสตร์เบื้องต้น">
+                    <h3>คณิตศาสตร์เบื้องต้น</h3>
+                    <p>250 บาท</p>
+                    <button>เพิ่มลงตะกร้า</button>
+                </div>
+                <div class="book-card sold-out">
+                    <div class="status-badge">สินค้าหมด</div>
+                    <img src="https://online.pubhtml5.com/oyfi/btfu/files/large/1.jpg" alt="ฟิสิกส์พื้นฐาน">
+                    <h3>ฟิสิกส์พื้นฐาน</h3>
+                    <p>280 บาท</p>
+                    <button>เพิ่มลงตะกร้า</button>
+                </div>
+                <div class="book-card sold-out">
+                    <div class="status-badge">สินค้าหมด</div>
+                    <img src="https://1568886761.rsc.cdn77.org/books/14887/Thumbnail/large.gif" alt="เคมีเบื้องต้น">
+                    <h3>เคมีเบื้องต้น</h3>
+                    <p>260 บาท</p>
+                    <button>เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 คลือหนังสัง</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
